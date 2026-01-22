@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# School of Gaming – Registration Form System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a prototype registration system developed during my internship at **School of Gaming (SoG)**.  
+The goal is to modernize and simplify the student registration and admin approval process for after-school gaming clubs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Project Purpose
 
-## React Compiler
+- Replace / improve the existing registration workflow
+- Provide a clear, step-by-step registration form for parents
+- Enable admins to review, accept, waitlist, or cancel registrations
+- Support multilingual usage (FI / EN)
+- Create a scalable base for future automation and dashboards
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Parent / Student Side
+- Landing page with School of Gaming branding
+- Multi-step registration form
+  - Activity selection
+  - Parent & child information
+  - Additional details
+  - Summary & confirmation
+- Language toggle (FI / EN)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Admin Side
+- Admin dashboard (protected via URL query)
+- View all registrations
+- Accept / waitlist / cancel registrations
+- Capacity-aware acceptance logic
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend:** React + TypeScript + Vite
+- **Styling:** Custom CSS (SoG theme)
+- **Backend / DB:** Supabase (PostgreSQL)
+- **Auth:** Supabase Auth (Admin)
+- **Routing:** React Router
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Running the Project Locally
+
+### 1. Clone the repository and run by following the steps
+```bash
+git clone https://github.com/Krishna7770/Registration_Form_System-SOG_Internship.git
+
+cd Registration_Form_System-SOG_Internship
+
+2. Install dependencies
+npm install
+
+3. Create environment variables
+Create a .env file in the project root:
+
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+4. Start development server
+npm run dev
+
+
+5. The app will be available at:
+http://localhost:5173
