@@ -1,0 +1,132 @@
+/* IMPORTANT: remove Vite template styling that breaks layout */
+#root {
+  min-height: 100%;
+}
+
+/* Layout */
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-topbar {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 18px 16px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+
+
+.app-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 18px 16px 64px;
+  display: grid;
+  gap: 18px;
+}
+
+/* Make form elements match your cards a bit */
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+/*
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: whitesmoke;
+  color: var(--text);
+  outline: none;
+}
+*/
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: rgba(46, 242, 200, 0.35);
+}
+
+
+:root {
+  --sog-yellow: #FFC83D;
+  --sog-yellow-dark: #E6B530;
+  --sog-black: #111111;
+  --sog-gray: #F5F5F5;
+  --sog-border: #E0E0E0;
+}
+
+/* Global 
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--sog-black);
+  background: rgb(70, 67, 67);
+}
+  */
+
+/* Buttons 
+.btn-primary {
+  background: var(--sog-yellow-dark);
+  color: var(--sog-black);
+  border: 2;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--sog-yellow);
+}
+*/
+.btn-secondary {
+  background: var(--sog-gray);
+  border: 1px solid var(--sog-black);
+  color: var(--sog-black);
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: rgb(111, 231, 249);
+}
+
+/* Feature cards */
+.feature-card {
+  background: white;
+  border: 1px solid var(--sog-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+
+.btn-primary {
+  border-radius: 12px;
+  padding: 10px 18px;
+  border: 1px solid var(--sog-black);
+  background: var(--sog-yellow-dark);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--sog-yellow);
+  border-color: rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
